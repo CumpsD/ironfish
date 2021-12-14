@@ -831,7 +831,8 @@ export class Blockchain {
       let previousBlockHash
       let previousSequence
       let target
-      const timestamp = new Date(Date.now())
+      let timestamp = new Date(Date.now())
+      timestamp = new Date(timestamp.setSeconds(timestamp.getSeconds() + 10))
 
       if (!this.hasGenesisBlock) {
         previousBlockHash = GENESIS_BLOCK_PREVIOUS

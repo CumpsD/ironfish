@@ -388,7 +388,7 @@ export class MiningDirector {
     )
 
     this.logger.debug(
-      `Current block  ${newBlock.header.sequence}, has ${newBlock.transactions.length} transactions`,
+      `Current block ${newBlock.header.sequence}, has ${newBlock.transactions.length} transactions`,
     )
 
     // For mining, we want a serialized form of the header without the randomness on it
